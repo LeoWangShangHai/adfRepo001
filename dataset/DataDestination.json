@@ -8,6 +8,16 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "StockGroupName",
+				"type": "String"
+			},
+			{
+				"name": "LineProfit",
+				"type": "Double"
+			}
+		],
 		"typeProperties": {
 			"tableName": "[dbo].[bb]"
 		}
