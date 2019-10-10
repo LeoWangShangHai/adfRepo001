@@ -8,6 +8,16 @@
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
+		"structure": [
+			{
+				"name": "StockGroupName",
+				"type": "String"
+			},
+			{
+				"name": "LineProfit",
+				"type": "Double"
+			}
+		],
 		"typeProperties": {
 			"tableName": "[dbo].[StockGroupLineProfit]"
 		}
