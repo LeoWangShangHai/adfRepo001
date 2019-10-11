@@ -16,9 +16,12 @@
 			"transformations": [
 				{
 					"name": "Select1"
+				},
+				{
+					"name": "DerivedColumn1"
 				}
 			],
-			"script": "\n\nsource(output(\n\t\tStockGroupName as string,\n\t\tLineProfit as double\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select(mapColumn(\n\t\tStockGroupName,\n\t\tLineProfit\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
+			"script": "\n\nsource(output(\n\t\tStockGroupName as string,\n\t\tLineProfit as double\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select(mapColumn(\n\t\tStockGroupName\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nSelect1 derive(StockGroupName = ERROR_FUNCTION('')) ~> DerivedColumn1"
 		}
 	}
 }
