@@ -12,6 +12,11 @@
 			"metadata": "Integration runtime name",
 			"defaultValue": "integrationRuntime1"
 		},
+		"integrationRuntime_integrationRuntime2": {
+			"type": "string",
+			"metadata": "Integration runtime name",
+			"defaultValue": "integrationRuntime2"
+		},
 		"AzureDBtoAzureDB_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureDBtoAzureDB'"
@@ -49,6 +54,9 @@
 					},
 					"integrationRuntime_integrationRuntime1": {
 						"value": "[parameters('integrationRuntime_integrationRuntime1')]"
+					},
+					"integrationRuntime_integrationRuntime2": {
+						"value": "[parameters('integrationRuntime_integrationRuntime2')]"
 					},
 					"AzureDBtoAzureDB_connectionString": {
 						"value": "[parameters('AzureDBtoAzureDB_connectionString')]"
