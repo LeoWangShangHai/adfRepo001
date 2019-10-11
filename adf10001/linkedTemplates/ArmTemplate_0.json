@@ -420,7 +420,30 @@
 							"sink": {
 								"type": "AzureSqlSink"
 							},
-							"enableStaging": false
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "type",
+											"type": "String"
+										},
+										"sink": {
+											"name": "StockGroupName"
+										}
+									},
+									{
+										"source": {
+											"name": "cost",
+											"type": "String"
+										},
+										"sink": {
+											"name": "LineProfit"
+										}
+									}
+								]
+							}
 						},
 						"inputs": [
 							{
