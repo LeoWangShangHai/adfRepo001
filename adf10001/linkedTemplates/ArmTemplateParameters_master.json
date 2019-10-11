@@ -11,13 +11,16 @@
 		"integrationRuntime_integrationRuntime2": {
 			"value": "integrationRuntime2"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDBtoAzureDB_connectionString": {
 			"value": ""
 		},
-		"AzureSqlDatabase1_connectionString": {
+		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
 		"containerUri": {
