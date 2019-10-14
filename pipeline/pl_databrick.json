@@ -18,7 +18,7 @@
 					"mainClassName": "org.apache.spark.examples.SparkPi",
 					"libraries": [
 						{
-							"jar": "dbfs:/FileStore/jars/SparkPi-assembly-0.1.jar"
+							"jar": "dbfs:/docs/lib/spark-example.jar"
 						}
 					]
 				},
