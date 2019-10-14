@@ -459,7 +459,7 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
-					"newClusterNodeType": "Standard_DS3_v2",
+					"instancePoolId": "0913-055000-chows229-pool-Dj3IrTPM",
 					"newClusterNumOfWorker": "1",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
@@ -591,6 +591,10 @@
 						"userProperties": [],
 						"typeProperties": {
 							"mainClassName": "org.apache.spark.examples.SparkPi",
+							"parameters": [
+								"100",
+								""
+							],
 							"libraries": [
 								{
 									"jar": "dbfs:/docs/lib/spark-example.jar"
