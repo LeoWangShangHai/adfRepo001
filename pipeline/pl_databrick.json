@@ -16,9 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"mainClassName": "org.apache.spark.examples.SparkPi",
-					"parameters": [
-						"100"
-					],
+					"parameters": [],
 					"libraries": [
 						{
 							"jar": "dbfs:/docs/lib/spark-example.jar"
