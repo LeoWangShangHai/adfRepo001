@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"mainClassName": "org.apache.spark.examples.SparkPi",
 					"parameters": [
-						"\"100\"",
+						"100",
 						""
 					],
 					"libraries": [
