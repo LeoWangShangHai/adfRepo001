@@ -5,6 +5,9 @@
 			"referenceName": "ls_mysq_user_profile",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "ods_raw"
+		},
 		"annotations": [],
 		"type": "AzureMySqlTable",
 		"schema": [
