@@ -31,6 +31,9 @@
 				"precision": 19,
 				"scale": 0
 			}
-		]
+		],
+		"typeProperties": {
+			"tableName": "`accounts`"
+		}
 	}
 }
