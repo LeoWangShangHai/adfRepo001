@@ -30,7 +30,48 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "USER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "cost",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HOST",
+									"type": "String"
+								},
+								"sink": {
+									"name": "type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CURRENT_CONNECTIONS"
+								},
+								"sink": {
+									"name": "current"
+								}
+							},
+							{
+								"source": {
+									"name": "TOTAL_CONNECTIONS"
+								},
+								"sink": {
+									"name": "total"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
