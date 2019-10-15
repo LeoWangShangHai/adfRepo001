@@ -1,0 +1,11 @@
+{
+	"name": "ds_src_mysql_tag",
+	"properties": {
+		"folder": {
+			"name": "ods_raw"
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": []
+	}
+}
