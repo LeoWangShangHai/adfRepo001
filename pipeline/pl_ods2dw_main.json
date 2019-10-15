@@ -15,6 +15,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "AzureMySqlSource",
+						"queryTimeout": "02:00:00"
+					},
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
@@ -28,6 +32,12 @@
 					},
 					"enableStaging": false
 				},
+				"inputs": [
+					{
+						"referenceName": "ds_src_adms_tag",
+						"type": "DatasetReference"
+					}
+				],
 				"outputs": [
 					{
 						"referenceName": "ds_src_ablb_user_basic",
