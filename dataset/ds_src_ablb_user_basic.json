@@ -22,6 +22,15 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "cost",
+				"type": "String"
+			},
+			{
+				"name": "type",
+				"type": "String"
+			}
+		]
 	}
 }
