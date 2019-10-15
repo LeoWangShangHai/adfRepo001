@@ -7,7 +7,28 @@
 		},
 		"annotations": [],
 		"type": "AzureMySqlTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "USER",
+				"precision": 32,
+				"scale": 0
+			},
+			{
+				"name": "HOST",
+				"precision": 60,
+				"scale": 0
+			},
+			{
+				"name": "CURRENT_CONNECTIONS",
+				"precision": 19,
+				"scale": 0
+			},
+			{
+				"name": "TOTAL_CONNECTIONS",
+				"precision": 19,
+				"scale": 0
+			}
+		],
 		"typeProperties": {
 			"tableName": "`accounts`"
 		}
