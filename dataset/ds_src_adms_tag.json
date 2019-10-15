@@ -1,0 +1,15 @@
+{
+	"name": "ds_src_adms_tag",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_mysq_user_profile",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`accounts`"
+		}
+	}
+}
