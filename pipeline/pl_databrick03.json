@@ -15,11 +15,11 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"mainClassName": "scala.sample.SparkPi1",
+					"mainClassName": "com.microsoft.spark.example.WasbIOTest",
 					"parameters": [],
 					"libraries": [
 						{
-							"jar": "dbfs:/docs/lib/sample.jar"
+							"jar": "dbfs:/FileStore/jars/90b193be_2a18_4ba4_8b59_66a1c54fdf8d-SparkSimpleApp.jar"
 						}
 					]
 				},
