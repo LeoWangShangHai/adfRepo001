@@ -19,7 +19,7 @@
 					"parameters": [],
 					"libraries": [
 						{
-							"jar": "dbfs:/docs/lib/spark-example.jar"
+							"jar": "dbfs:/docs/lib/sample.jar"
 						}
 					]
 				},
