@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"mainClassName": "org.apache.spark.examples.SparkPi",
+					"mainClassName": "scala.sample.SparkPi1",
 					"parameters": [],
 					"libraries": [
 						{
