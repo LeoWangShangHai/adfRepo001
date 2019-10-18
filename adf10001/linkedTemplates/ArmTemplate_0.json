@@ -137,7 +137,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_databrick')]",
+			"name": "[concat(parameters('factoryName'), '/pl_databrick01')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -159,7 +159,7 @@
 							"parameters": [],
 							"libraries": [
 								{
-									"jar": "dbfs:/docs/lib/sample.jar"
+									"jar": "dbfs:/FileStore/jars/90b193be_2a18_4ba4_8b59_66a1c54fdf8d-SparkSimpleApp.jar"
 								}
 							]
 						},
@@ -274,7 +274,46 @@
 							"parameters": [],
 							"libraries": [
 								{
-									"jar": "dbfs:/docs/lib/sample.jar"
+									"jar": "dbfs:/FileStore/jars/90b193be_2a18_4ba4_8b59_66a1c54fdf8d-SparkSimpleApp.jar"
+								}
+							]
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks1",
+							"type": "LinkedServiceReference"
+						}
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_databrick03')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Jar1",
+						"type": "DatabricksSparkJar",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"mainClassName": "com.microsoft.spark.example.WasbIOTest",
+							"parameters": [],
+							"libraries": [
+								{
+									"jar": "dbfs:/FileStore/jars/90b193be_2a18_4ba4_8b59_66a1c54fdf8d-SparkSimpleApp.jar"
 								}
 							]
 						},
@@ -642,60 +681,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/DelimitedText1')]",
-				"[concat(variables('factoryId'), '/datasets/DataDestination')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pl_copy')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Copy data from on premise SQL Server to SQL Azure.\n\nYou can also go to \"Copy Data Tool\" to get the pipeline for more connectors and scenarios.",
-				"activities": [
-					{
-						"name": "SQL_to_SQLAzure",
-						"description": "Copy data from SQL server to SQL Azure",
-						"type": "Copy",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"source": {
-								"type": "SqlSource"
-							},
-							"sink": {
-								"type": "SqlSink",
-								"writeBatchSize": 10000
-							},
-							"enableStaging": false,
-							"dataIntegrationUnits": 0
-						},
-						"inputs": [
-							{
-								"referenceName": "DataSource",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						],
-						"outputs": [
-							{
-								"referenceName": "DataDestination",
-								"type": "DatasetReference",
-								"parameters": {}
-							}
-						]
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/DataSource')]",
 				"[concat(variables('factoryId'), '/datasets/DataDestination')]"
 			]
 		}
