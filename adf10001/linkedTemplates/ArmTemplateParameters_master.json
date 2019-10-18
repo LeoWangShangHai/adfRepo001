@@ -23,6 +23,9 @@
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
+		"ls_mysq_user_profile_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
